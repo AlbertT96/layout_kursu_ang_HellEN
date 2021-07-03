@@ -1,0 +1,119 @@
+.strengths {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 280px;
+  margin: 0 auto;
+
+  @media screen and (min-width:768px) {
+    align-items: center;
+
+  }
+
+  &__title {
+    padding-bottom: 30px;
+    align-items: flex-start;
+    width: 180px;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 136%;
+    letter-spacing: 0.03em;
+    font-family: var(--main-font);
+
+    @media screen and(min-width:768px) and (max-width:1279px) {
+      font-weight: 800;
+      font-size: 26px;
+      line-height: 130%;
+    }
+
+  }
+
+  &__container {
+    width: 280px;
+    background: #FFFFFF;
+    box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
+    padding: 20px 14px 4px 30px;
+    transition: 0.5s;
+
+    @media screen and(min-width:768px) and (max-width:1279px) {
+      display: flex;
+      transition: 0.5s;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      width: 688px;
+      padding: 30px 100px;
+    }
+
+    @media screen and (min-width:1280px) {
+      width: 1314px;
+      transition: 0.5s;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: baseline;
+      padding: 70px 84px;
+    }
+  }
+
+  &__list {
+    @media screen and(min-width:768px) and (max-width:1279px) {
+      width: 236px;
+    }
+
+    @media screen and (min-width:1280px) {
+      width: 356px;
+
+    }
+  }
+
+  &__number {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 164.9%;
+    letter-spacing: 0.08em;
+    color: var(--orange--color);
+    font-family: var(--main-font);
+    padding-bottom: 10px;
+    cursor: pointer;
+
+    @media screen and (min-width:1280px) {
+      font-size: 20px;
+    }
+
+    &:hover {
+      text-shadow: 2px 4px 5px rgba(0, 0, 0, 0.75);
+      transition: 0.5s;
+    }
+
+  }
+
+  &__paragraph {
+    color: var(--secondary--color);
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.08em;
+    font-style: normal;
+    font-weight: bold;
+    font-family: var(--main-font);
+
+    &:not(:last-child) {
+      padding-bottom: 30px;
+
+    }
+
+    @media screen and(min-width:768px) and (max-width:1279px) {
+      padding-bottom: 38px;
+    }
+
+    @media screen and (min-width:1280px) {
+      padding-bottom: 42px;
+      font-size: 20px;
+
+    }
+  }
+
+}

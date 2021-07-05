@@ -1,0 +1,36 @@
+.hero__title {
+    padding-top: 50px;
+    padding-right: 20px;
+    padding-bottom: 54px;
+    padding-left: 20px;
+
+    font-weight: 800;
+    font-size: 19px;
+    line-height: 130%;
+    letter-spacing: 0.03em;
+    color: #111518;
+    text-align: left;
+}
+
+.hero__undertitle {
+    padding: 0 20px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 157%;
+    letter-spacing: 0.08em;
+    color: #B9B9B9;
+}
+
+.hero__description {
+    padding: 0 20px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 157%;
+    letter-spacing: 0.08em;
+    color: #111518;
+    margin-bottom: 30px;
+}
+
+.hero__description > span {
+    color: #FF6B09;
+}

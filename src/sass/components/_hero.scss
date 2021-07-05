@@ -48,3 +48,21 @@
 .hero__image .hero-photo {
   width: 100%;
 }
+
+.hero__list-container {
+  padding-right: 50px;
+  padding-left: 121px;
+}
+
+.hero__list {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 164.9%;
+  letter-spacing: 0.08em;
+  color: #111518;
+  text-align: center;
+  margin-bottom: 43.5px;
+}
+
+.list__item:nth-child(1) {
+}

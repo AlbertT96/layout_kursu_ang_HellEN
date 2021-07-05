@@ -10,43 +10,56 @@
       integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g=="
       crossorigin="anonymous"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <!-- W taki sposbu dodajemy fragmenty w główny HTML-plik strony. -->
-    
+
     <include src="./partials/slidershow.html"></include>
     <include src="./partials/we-guarantee.html"></include>
     <include src="./partials/strengths.html"></include>
-   
-
+    <include src="./partials/footer.html"></include>
 
     <!-- Skrypt jest na samym dole kodu. On juz ma w sobie podłączony SAAS plik. -->
     <script src="./index.js"></script>
-    <script >
+    <script>
       var slideIndex = 1;
       showSlides(slideIndex);
 
       // Next/previous controls
       function plusSlides(n) {
-      showSlides(slideIndex += n);
+        showSlides((slideIndex += n));
       }
 
       // Thumbnail image controls
       function currentSlide(n) {
-      showSlides(slideIndex = n);
+        showSlides((slideIndex = n));
       }
 
       function showSlides(n) {
-      var i;
-      var slides = document.getElementsByClassName("mySlides");
-      var dots = document.getElementsByClassName("img-dot");
-      if (n > slides.length) {slideIndex = 1}
-      if (n < 1) {slideIndex=slides.length} for (i=0; i < slides.length; i++) { slides[i].style.display="none" ; } for
-        (i=0; i < dots.length; i++) { dots[i].className=dots[i].className.replace(" active", "" ); }
-        slides[slideIndex-1].style.display="flex" ; dots[slideIndex-1].className +=" active" ; }
+        var i;
+        var slides = document.getElementsByClassName('mySlides');
+        var dots = document.getElementsByClassName('img-dot');
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = 'none';
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(' active', '');
+        }
+        slides[slideIndex - 1].style.display = 'flex';
+        dots[slideIndex - 1].className += ' active';
+      }
     </script>
   </body>
 </html>

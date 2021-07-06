@@ -11,13 +11,32 @@
   border-radius: 0px;
   font-weight: 700;
   font-size: 12px;
-  line-height: 1.250;
+  line-height: 1.25;
   letter-spacing: 0.08em;
-  color: #FFFFFF;
-  background-color: #FF6B09;
+  color: #ffffff;
+  background-color: #ff6b09;
   margin: 0 auto;
 }
 
 .btn__form {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .btn__form {
+    margin-bottom: 138.5px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .btn {
+    font-size: 14px;
+    width: 354px;
+    height: 70px;
+    letter-spacing: 0.14em;
+  }
+
+  .btn__form {
+    margin-bottom: 138.5px;
+  }
 }

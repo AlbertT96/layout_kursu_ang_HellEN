@@ -50,7 +50,8 @@
 }
 
 .hero__list-container {
-  padding-right: 50px;
+  position: relative;
+  padding-right: 48px;
   padding-left: 121px;
 }
 
@@ -60,9 +61,56 @@
   line-height: 164.9%;
   letter-spacing: 0.08em;
   color: #111518;
-  text-align: center;
+  text-align: left;
   margin-bottom: 43.5px;
 }
 
 .list__item:nth-child(1) {
+  margin-bottom: 26px;
+  width: 146px;
+
+  &::before {
+    position: absolute;
+    content: '';
+    background-image: url('../../src/images/hero/student.svg');
+    background-size: cover;
+    background-position: center;
+    width: 59px;
+    height: 60px;
+    left: 52px;
+    top: -8px;
+  }
+}
+
+.list__item:nth-child(2) {
+  margin-bottom: 21px;
+  width: 120px;
+
+  &::before {
+    position: absolute;
+    content: '';
+    background-image: url('../../src/images/hero/learning.svg');
+    background-size: cover;
+    background-position: center;
+    width: 59px;
+    height: 60px;
+    left: 52px;
+    top: 78px;
+  }
+}
+
+.list__item:nth-child(3) {
+  width: 100px;
+
+  &::before {
+    position: absolute;
+    content: '';
+    background-image: url('../../src/images/hero/dolar.svg');
+    background-size: cover;
+    background-position: center;
+    width: 59px;
+    height: 60px;
+    left: 52px;
+    top: 169px;
+  }
 }

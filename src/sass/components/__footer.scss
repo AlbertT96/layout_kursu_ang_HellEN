@@ -1,0 +1,414 @@
+// FUNKCJE + Placeholder
+
+%input {
+  color: var(--how-we-do-hover-color);
+  border: 1px solid var(--how-we-do-hover-color);
+  width: 280px;
+  height: 48px;
+  background-color: transparent;
+  box-sizing: border-box;
+
+  @media screen and (min-width: 768px) and (max-width: 1680px) {
+    width: 390px;
+    height: 48px;
+  }
+
+  @media screen and (min-width: 1680px) {
+    width: 478px;
+    height: 70px;
+  }
+}
+
+@mixin textLook($font, $color, $weight, $size, $height, $align, $spacing) {
+  font-family: $font;
+  color: $color;
+  font-style: normal;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $height;
+  text-align: $align;
+  letter-spacing: $spacing;
+}
+
+@mixin centerItemsFlex() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin simpleTransition($time) {
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) $time;
+}
+
+//KONIEC FUNKCJI
+
+.footer {
+  &__title {
+    width: 87.5%;
+    margin: 56px auto 24px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    @include simpleTransition(500ms);
+    @include textLook(
+      var(--main-font),
+      var(--how-we-do-hover-color),
+      800,
+      14px,
+      18px,
+      center,
+      0.03em
+    );
+
+    &--orange-text {
+      color: var(--orange--color);
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1680px) {
+      @include simpleTransition(500ms);
+      font-size: 26px;
+      line-height: 130%;
+      margin: 66px auto 50px;
+    }
+
+    @media screen and (min-width: 1680px) {
+      @include simpleTransition(500ms);
+      width: 1090px;
+      height: 178px;
+      font-size: 46px;
+      line-height: 130%;
+      margin: 100px auto 50px;
+    }
+  }
+
+  &__text {
+    width: 87.5%;
+    display: block;
+    margin: 0 auto;
+    @include simpleTransition(500ms);
+    @include textLook(
+      var(--main-font),
+      var(--how-we-do-hover-color),
+      600,
+      12px,
+      15px,
+      center,
+      0.08em
+    );
+
+    @media screen and (min-width: 768px) and (max-width: 1680px) {
+      @include simpleTransition(500ms);
+      height: 51px;
+      font-size: 14px;
+      line-height: 17px;
+    }
+
+    @media screen and (min-width: 1680px) {
+      @include simpleTransition(500ms);
+      width: 1090px;
+      height: 74px;
+      font-size: 30px;
+      line-height: 37px;
+    }
+  }
+}
+
+.background-image {
+  @include simpleTransition(500ms);
+  background: var(--secondary--color) url(./../images/footer/mobile.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+
+  @media screen and (min-width: 768px) and (max-width: 1680px) {
+    @include simpleTransition(500ms);
+    background: var(--secondary--color) url(./../images/footer/tablet.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  @media screen and (min-width: 1680px) {
+    @include simpleTransition(500ms);
+    background: var(--secondary--color) url(./../images/footer/desktop.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+.registration {
+  @include centerItemsFlex();
+  flex-direction: column;
+
+  &__name {
+    @extend %input;
+    padding: 17px 50px 17px 100px;
+
+    @media screen and (min-width: 1680px) {
+      padding: 17px 125px;
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+
+  &__phone {
+    @extend %input;
+    padding: 17px 50px 17px 100px;
+
+    @media screen and (min-width: 1680px) {
+      padding: 17px 130px;
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+
+    &--name {
+      margin-top: 43px;
+      @include simpleTransition(500ms);
+
+      @media screen and (min-width: 768px) and (max-width: 1680px) {
+        @include simpleTransition(500ms);
+        margin-top: 23px;
+      }
+
+      @media screen and (min-width: 1680px) {
+        @include simpleTransition(500ms);
+        margin-top: 56px;
+      }
+    }
+
+    &--phone {
+      margin-top: 20px;
+      @include simpleTransition(500ms);
+
+      @media screen and (min-width: 1680px) {
+        @include simpleTransition(500ms);
+        margin-top: 30px;
+      }
+    }
+  }
+
+  &__label {
+    position: absolute;
+    width: 83px;
+    height: 17px;
+    left: 20px;
+    top: 17px;
+
+    @include textLook(
+      var(--main-font),
+      var(--how-we-do-hover-color),
+      600,
+      14px,
+      17px,
+      center,
+      0.08em
+    );
+
+    @media screen and (min-width: 1680px) {
+      font-size: 20px;
+      line-height: 24px;
+      left: 40px;
+      top: 23px;
+    }
+  }
+}
+
+//buttony
+.footer__button {
+  background: var(--orange--color);
+  display: block;
+  margin: 50px auto;
+  border: none;
+  width: 260px;
+  height: 48px;
+  @include simpleTransition(500ms);
+
+  @media screen and (min-width: 768px) and (max-width: 1680px) {
+    @include simpleTransition(500ms);
+    margin: 31px auto 67px;
+  }
+
+  @media screen and (min-width: 1680px) {
+    @include simpleTransition(500ms);
+    margin: 80px auto 62px;
+    width: 354px;
+    height: 70px;
+  }
+}
+
+.button__text {
+  text-transform: uppercase;
+
+  @include textLook(
+    var(--main-font),
+    var(--how-we-do-hover-color),
+    700,
+    12px,
+    15px,
+    center,
+    0.08em
+  );
+
+  @media screen and (min-width: 1680px) {
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
+
+.social {
+  @include centerItemsFlex();
+  
+  &__list {
+    @media screen and (min-width: 768px) and (max-width: 1280px) {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    @media screen and (min-width: 1280px) {
+      display: flex;
+      justify-content: start;
+    }
+  }
+
+  &__items {
+    @include centerItemsFlex();
+    @media screen and (min-width: 768px) {
+      position: relative;
+
+      &:last-child::before {
+        position: absolute;
+        content: '';
+        left: -26px;
+        width: 1px;
+        height: 40px;
+        background-color: var(--guarantee--border);
+        top: 45px;
+      }
+    }
+
+    @media screen and (min-width: 1280px) {
+      &:last-child::before {
+        top: 57px;
+      }
+    }
+  }
+
+  .logo {
+    @include simpleTransition(500ms);
+    width: 84.12px;
+    height: 30px;
+    margin-top: 33px;
+
+    @media screen and (min-width: 768px) and (max-width: 1280px) {
+      @include simpleTransition(500ms);
+      width: 128px;
+      height: 45px;
+      margin-left: 40px;
+      margin-top: 40px;
+    }
+
+    @media screen and (min-width: 1280px) {
+      @include simpleTransition(500ms);
+      width: 128px;
+      height: 45px;
+      margin-left: 183px;
+      margin-top: 52px;
+    }
+  }
+
+  .handset {
+    @include simpleTransition(500ms);
+    width: 20px;
+    height: 19.21px;
+    margin-top: 21px;
+    margin-right: 10px;
+
+    @media screen and (min-width: 768px) and (max-width: 1280px) {
+      @include simpleTransition(500ms);
+      width: 24px;
+      height: 23.06px;
+      margin-right: 10px;
+      margin-top: 51px;
+    }
+
+    @media screen and (min-width: 1280px) {
+      @include simpleTransition(500ms);
+      width: 30px;
+      height: 28.82px;
+      margin-right: 15px;
+      margin-left: 290px;
+      margin-top: 60px;
+    }
+  }
+
+  .phone-number {
+    margin-top: 21px;
+    @include simpleTransition(500ms);
+    @include textLook(var(--main-font), var(--main--color), 600, 14px, 1.214, center, 0.08em);
+
+    @media screen and (min-width: 768px) and (max-width: 1280px) {
+      @include simpleTransition(500ms);
+      font-size: 20px;
+      line-height: 24px;
+      margin-top: 51px;
+    }
+
+    @media screen and (min-width: 1280px) {
+      @include simpleTransition(500ms);
+      font-size: 30px;
+      line-height: 37px;
+      margin-right: 40px;
+      margin-top: 59px;
+    }
+  }
+
+  .right-center {
+    @media screen and (min-width: 768px) and (max-width: 1279px) {
+      @include simpleTransition(500ms);
+      margin-left: auto;
+      margin-right: 48px;
+    }
+  }
+
+  .instagram {
+    @include simpleTransition(500ms);
+    width: 40px;
+    height: 40px;
+    margin-top: 33px;
+
+    @media screen and (min-width: 768px) and (max-width: 1280px) {
+      @include simpleTransition(500ms);
+      margin-top: 45px;
+      margin-right: 41px;
+    }
+
+    @media screen and (min-width: 1280px) {
+      @include simpleTransition(500ms);
+      margin-top: 57.25px;
+    }
+  }
+}
+
+.reserved {
+  @include centerItemsFlex();
+  background: var(--secondary--color);
+  height: 70px;
+  margin-top: 33px;
+
+  @media screen and (min-width: 768px) {
+    justify-content: flex-start;
+  }
+
+  &__text {
+    @include textLook(var(--main-font), var(--guarantee--border), 500, 14px, 2, center, 0.08em);
+
+    @media screen and (min-width: 768px) and (max-width: 1280px) {
+      margin-left: 40px;
+    }
+
+    @media screen and (min-width: 1280px) {
+      margin-left: 183px;
+    }
+  }
+}

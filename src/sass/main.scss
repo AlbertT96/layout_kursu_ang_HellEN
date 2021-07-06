@@ -2,7 +2,6 @@
  * Główny plik dla stylów.
  * Wszystkie partials podłączamy tutaj.
  */
-
 @import './base/common';
 @import './base/container';
 @import './components/hero';
@@ -11,4 +10,6 @@
 @import './components/_strengths';
 @import './components/_how-we-do';
 @import './base/buttons';
+@import './components/_footer';
+@import './components/_program';
 

@@ -1,0 +1,226 @@
+.program {
+  padding-bottom: 537px;
+  background-color: var(--secondary--color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  &::after {
+    content: url('../images/program/img1-mobile.png');
+    position: absolute;
+    bottom: 442px;
+    right: 0px;
+  }
+}
+
+
+.program__title {
+  font-family: var(--main-font);
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 1.30;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--how-we-do-hover-color);
+  padding-top: 50px;
+  padding-bottom: 6px;
+}
+
+.program__wrapper {
+  display: flex;
+  margin-left: 64px;
+  padding-left: 26px;
+  align-items: flex-end;
+  position: relative;
+}
+
+.program__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.program__list--semester {
+  font-family: var(--main-font);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 2.0;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--how-we-do-hover-color);
+  padding-top: 37px;
+}
+
+.program__item {
+  position: relative;
+}
+
+.program__dot {
+  display: flex;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--orange--color);
+  position: absolute;
+  top: 45px;
+  left: -36px;
+}
+
+.program__list--border {
+  background-color: var(--how-we-do-hover-color);
+  width: 1px;
+  height: 1200px;
+  position: absolute;
+  top: 50px;
+  left: -5px;
+}
+
+.program__sections {
+  display: flex;
+  flex-direction: column;
+}
+
+.program__block {
+  font-family: var(--main-font);
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.667;
+  letter-spacing: 0.08em;
+  color: var(--orange--color);
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+
+.program__description {
+  font-family: var(--main-font);
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.667;
+  letter-spacing: 0.08em;
+  color: var(--guarantee--border);
+  opacity: 0.5;
+  width: 176px;
+  padding-bottom: 3px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+
+  .program {
+    padding-bottom: 392px;
+    position: relative;
+
+    &::after {
+      content: url('../images/program/img1-tablet.png');
+      position: absolute;
+      bottom: 240px;
+      right: 0;
+    }
+  }
+
+  .program__title {
+    font-size: 26px;
+    line-height: 1.308;
+    text-align: left;
+    padding-top: 60px;
+    display: flex;
+    margin-left: 75px;
+    padding-bottom: 15px;
+  }
+
+  .program__sections {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+
+  .program__sections-wrapper {
+    width: 226px;
+  }
+
+  .program__wrapper {
+    margin-left: 150px;
+  }
+
+  .program__list--border {
+    height: 720px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+
+  .program {
+    padding-bottom: 363px;
+
+    &::after {
+      content: url('../images/program/img1-desktop.png');
+      opacity: 0.5;
+      position: absolute;
+      bottom: 58px;
+      left: -60px;
+    }
+  }
+
+  .program__list {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .program__title {
+    font-size: 46px;
+    line-height: 1.30;
+    text-align: left;
+    padding-top: 120px;
+    padding-bottom: 123px;
+    margin-left: 75px;
+  }
+
+  .program__list--semester {
+    font-size: 20px;
+    line-height: 1.40;
+    letter-spacing: 0.08em;
+  }
+
+  .program__block {
+    font-size: 20px;
+    line-height: 1.667;
+    letter-spacing: 0.08em;
+    padding-top: 25px;
+    padding-bottom: 10px;
+  }
+
+  .program__description {
+    font-size: 18px;
+    line-height: 1.667;
+    letter-spacing: 0.08em;
+    opacity: 0.5;
+    width: 240px;
+    padding-bottom: 0;
+  }
+
+  .program__section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .program__dot {
+    top: -26px;
+    left: -2px;
+  }
+
+  .program__list--border {
+    display: none;
+  }
+
+  .program__list--border-desktop {
+    background-color: var(--how-we-do-hover-color);
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    top: 282px;
+    left: 0;
+  }
+}

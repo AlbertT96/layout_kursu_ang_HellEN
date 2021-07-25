@@ -1,15 +1,20 @@
 .strengths {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
   width: 280px;
   margin: 0 auto;
-
-  @media screen and (min-width:768px) {
+  margin-top: -480px;
+    @media screen and (min-width:768px) {
     align-items: center;
-
+    margin-top: -230px;
   }
+   @media screen and (min-width:1280px){
+     margin-top: -200px;
+   }
+
 
   &__title {
     padding-bottom: 30px;
@@ -21,11 +26,18 @@
     line-height: 136%;
     letter-spacing: 0.03em;
     font-family: var(--main-font);
+    @media screen and (min-width:1280px){
+display: none;
+    }
+@media screen and (max-width:1280px){
+  color:#fff;
+}
 
     @media screen and(min-width:768px) and (max-width:1279px) {
       font-weight: 800;
       font-size: 26px;
       line-height: 130%;
+      width:400px;
     }
 
   }
